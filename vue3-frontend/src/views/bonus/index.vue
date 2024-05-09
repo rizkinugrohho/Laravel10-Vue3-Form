@@ -30,6 +30,19 @@ onMounted(() => {
     fetchDataBonus();
 });
 
+const calculateTotalBonus = (bonus) => {
+    const percentage1 = parseFloat(bonus.percentage1);
+    const percentage2 = parseFloat(bonus.percentage2);
+    const percentage3 = parseFloat(bonus.percentage3);
+
+    if (isNaN(percentage1) || isNaN(percentage2) || isNaN(percentage3)) {
+        return "Invalid percentages";
+    }
+
+    const total = (percentage1 + percentage2 + percentage3) * 100;
+    return total.toFixed(2) + "%";
+};
+
 //method deletePost
 const deleteBonus = async (id) => {
     await api.delete(`/api/bonus/${id}`)
@@ -70,6 +83,7 @@ const deleteBonus = async (id) => {
                                         <th class="text-center">Bonus</th>
                                         <th class="text-center">Buruh C</th>
                                         <th class="text-center">Bonus</th>
+                                        <th class="text-center">Total Presentasi</th>
                                         <th class="text-center">Action</th>
                                     </tr>
                                 </thead>
@@ -88,6 +102,7 @@ const deleteBonus = async (id) => {
                                         <td class="text-center">{{ (bonus.percentage2 * 100).toFixed(2) }}%</td>
                                         <td class="text-center">{{ bonus.employee3 }}</td>
                                         <td class="text-center">{{ (bonus.percentage3 * 100).toFixed(2) }}%</td>
+                                        <td class="text-center">{{ calculateTotalBonus(bonus) }}</td>
                                         <td class="text-center">
                                             <router-link :to="{ name: 'bonus.show', params: { id: bonus.id } }"
                                                 class="btn btn-sm btn-primary rounded-sm shadow border-0 me-2">Show</router-link>

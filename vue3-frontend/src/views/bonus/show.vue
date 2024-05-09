@@ -32,6 +32,11 @@
                                         <td class="text-center">{{ (bonus.percentage3 * 100).toFixed(2) }}%</td>
                                         <td class="text-center">Rp. {{ bonus.bonus3 }}</td>
                                     </tr>
+                                    <tr>
+                                        <td class="text-center"><strong>Total Presentasi :</strong></td>
+                                        <td class="text-center"><strong>{{ calculateTotalBonus(bonus) }}</strong></td>
+                                        <td class="text-center"><strong>{{ calculateTotalBonus2(bonus) }}</strong></td>
+                                    </tr>
                                 </tbody>
                             </table>
                             <router-link :to="{ name: 'bonus.index' }"
@@ -64,4 +69,30 @@ onMounted(async () => {
         loading.value = false;
     }
 });
+
+const calculateTotalBonus = (bonus) => {
+    const percentage1 = parseFloat(bonus.percentage1);
+    const percentage2 = parseFloat(bonus.percentage2);
+    const percentage3 = parseFloat(bonus.percentage3);
+
+    if (isNaN(percentage1) || isNaN(percentage2) || isNaN(percentage3)) {
+        return "Invalid percentages";
+    }
+
+    const total = (percentage1 + percentage2 + percentage3) * 100;
+    return total.toFixed(2) + "%";
+};
+
+const calculateTotalBonus2 = (bonus) => {
+    const bonus1 = parseFloat(bonus.bonus1);
+    const bonus2 = parseFloat(bonus.bonus2);
+    const bonus3 = parseFloat(bonus.bonus3);
+
+    if (isNaN(bonus1) || isNaN(bonus2) || isNaN(bonus3)) {
+        return "Invalid percentages";
+    }
+
+    const total = (bonus1 + bonus2 + bonus3);
+    return "Rp. " + total;
+};
 </script>
