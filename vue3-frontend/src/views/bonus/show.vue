@@ -8,7 +8,7 @@
                         <h3>Pembayaran : Rp. {{ bonus.total_bonus }}</h3>
                         <div v-if="loading">Loading...</div>
                         <div v-else>
-                            <table class="table">
+                            <table class="table table-striped">
                                 <thead>
                                     <tr>
                                         <th class="text-center">Nama Karyawan</th>
@@ -34,8 +34,10 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center"><strong>Total Presentasi :</strong></td>
-                                        <td class="text-center"><strong>{{ calculateTotalBonus(bonus) }}</strong></td>
-                                        <td class="text-center"><strong>{{ calculateTotalBonus2(bonus) }}</strong></td>
+                                        <td class="text-center"><strong>{{ calculateTotalBonus(bonus)
+                                                }}</strong></td>
+                                        <td class="text-center"><strong>{{ calculateTotalBonus2(bonus)
+                                                }}</strong></td>
                                     </tr>
                                 </tbody>
                             </table>

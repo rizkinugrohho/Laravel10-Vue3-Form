@@ -3,7 +3,6 @@
 Coding Challenge built with Laravel, Vue.js and Alpine.js. <br>
 
 ## Demo
-https://github.com/rizkinugrohho/Laravel10-Vue3-Form/assets/36374356/5dbc8ed5-7698-400c-8e8b-1d25bd312d86
 
 https://github.com/rizkinugrohho/Laravel10-Vue3-Form/assets/36374356/5dbc8ed5-7698-400c-8e8b-1d25bd312d86
 

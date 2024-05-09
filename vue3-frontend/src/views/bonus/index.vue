@@ -55,8 +55,6 @@ const deleteBonus = async (id) => {
             window.alert('Data tidak terhapus. Silahkan coba lagi.');
         });
 };
-
-
 </script>
 
 <template>
@@ -102,7 +100,8 @@ const deleteBonus = async (id) => {
                                         <td class="text-center">{{ (bonus.percentage2 * 100).toFixed(2) }}%</td>
                                         <td class="text-center">{{ bonus.employee3 }}</td>
                                         <td class="text-center">{{ (bonus.percentage3 * 100).toFixed(2) }}%</td>
-                                        <td class="text-center">{{ calculateTotalBonus(bonus) }}</td>
+                                        <td class="text-center"><strong>{{ calculateTotalBonus(bonus)
+                                                }}</strong></td>
                                         <td class="text-center">
                                             <router-link :to="{ name: 'bonus.show', params: { id: bonus.id } }"
                                                 class="btn btn-sm btn-primary rounded-sm shadow border-0 me-2">Show</router-link>

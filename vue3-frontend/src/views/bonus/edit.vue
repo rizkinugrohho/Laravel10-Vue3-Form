@@ -75,8 +75,7 @@ const updateBonus = async () => {
 
                             <div class="mb-3">
                                 <label class="form-label fw-bold">Buruh A</label>
-                                <input type="text" class="form-control" v-model="employee1"
-                                    placeholder="Nama Buruh A..">
+                                <input type="text" class="form-control" v-model="employee1" placeholder="Nama..">
                                 <div v-if="errors.employee1" class="alert alert-danger mt-2">
                                     <span>Kolom ini tidak boleh kosong.</span>
                                 </div>
@@ -91,8 +90,7 @@ const updateBonus = async () => {
                             </div>
                             <div class="mb-3">
                                 <label class="form-label fw-bold">Buruh B</label>
-                                <input type="text" class="form-control" v-model="employee2"
-                                    placeholder="Nama Buruh B..">
+                                <input type="text" class="form-control" v-model="employee2" placeholder="Nama..">
                                 <div v-if="errors.employee2" class="alert alert-danger mt-2">
                                     <span>Kolom ini tidak boleh kosong.</span>
                                 </div>
@@ -100,15 +98,14 @@ const updateBonus = async () => {
                             <div class="mb-3">
                                 <label class="form-label fw-bold">Bonus</label>
                                 <input class="form-control" rows="5" v-model="percentage2"
-                                    placeholder="presentasi Bonus Buruh B..">
+                                    placeholder="presentasi Bonus 1 - 100%">
                                 <div v-if="errors.percentage2" class="alert alert-danger mt-2">
                                     <span>Kolom ini tidak boleh kosong.</span>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label fw-bold">Buruh C</label>
-                                <input type="text" class="form-control" v-model="employee3"
-                                    placeholder="Nama Buruh C..">
+                                <input type="text" class="form-control" v-model="employee3" placeholder="Nama..">
                                 <div v-if="errors.employee3" class="alert alert-danger mt-2">
                                     <span>Kolom ini tidak boleh kosong.</span>
                                 </div>
@@ -116,7 +113,7 @@ const updateBonus = async () => {
                             <div class="mb-3">
                                 <label class="form-label fw-bold">Bonus</label>
                                 <input class="form-control" rows="5" v-model="percentage3"
-                                    placeholder="presentasi Bonus Buruh C..">
+                                    placeholder="presentasi Bonus 1 - 100%">
                                 <div v-if="errors.percentage3" class="alert alert-danger mt-2">
                                     <span>Kolom ini tidak boleh kosong.</span>
                                 </div>
